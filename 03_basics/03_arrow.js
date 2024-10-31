@@ -1,58 +1,54 @@
-//var c = 300
-let a = 300
-if (true) {
-    let a = 10
-    const b = 20
-    // console.log("INNER: ", a);
-    
-}
+const user = {
+    username: "arbbaz",
+    price: 999,
 
-
-
-// console.log(a);
-// console.log(b);
-// console.log(c);
-
-
-function one(){
-    const username = "arbaaz"
-
-    function two(){
-        const website = "youtube"
-        console.log(username);
+    welcomeMessage: function() {
+        console.log(`${this.username} , welcome to website`);
+        console.log(this);
     }
-    // console.log(website);
-
-     two()
 
 }
 
-// one()
+// user.welcomeMessage()
+// user.username = "sam"
+// user.welcomeMessage()
 
-if (true) {
-    const username = "arbaaz"
-    if (username === "arbaaz") {
-        const website = " youtube"
-        // console.log(username + website);
-    }
-    // console.log(website);
+// console.log(this);
+
+// function chai(){
+//     let username = "arbbaz"
+//     console.log(this.username);
+// }
+
+// chai()
+
+// const chai = function () {
+//     let username = "arbbaz"
+//     console.log(this.username);
+// }
+
+const chai =  () => {
+    let username = "arbbaz"
+    console.log(this);
 }
 
-// console.log(username);
+
+// chai()
+
+// const addTwo = (num1, num2) => {
+//     return num1 + num2
+// }
+
+// const addTwo = (num1, num2) =>  num1 + num2
+
+// const addTwo = (num1, num2) => ( num1 + num2 )
+
+const addTwo = (num1, num2) => ({username: "arbbaz"})
 
 
-// ++++++++++++++++++ interesting ++++++++++++++++++
+console.log(addTwo(3, 4))
 
 
-console.log(addone(5))
+// const myArray = [2, 5, 3, 7, 8]
 
-function addone(num){
-    return num + 1
-}
-
-
-
-addTwo(5)
-const addTwo = function(num){
-    return num + 2
-}
+// myArray.forEach()
